@@ -37,7 +37,7 @@ public class JdbcUtil {
     public static Connection getConnection() {
         try {
 
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/CM"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Lab"
                     , "root", "123456");
             return conn;
         } catch (Exception e) {

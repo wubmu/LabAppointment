@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>    
+    <title>登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script language="javascript">
+		function check(){
+			if (form1.name.value == "")
+			{
+				alert("请输入用户名");form1.name.focus();return;
+			}else if (form1.password.value == "")
+			{
+				alert("请输入密码");form1.password.focus();return;
+			}else
+			{
+				form1.submit();
+			}
+		}
+	</script>
+    <style type="text/css">
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+  		
+		body{
+			font-family: "Microsoft Yahei";
+		} 
+		#all{
+			width:1444px;
+			height:767px;
+			background:url("./image/5.jpg");
+			margin:0 auto;
+		}
+		#login {
+		    width: 400px;
+		    height: auto;
+		    overflow: hidden;
+		    border: solid 1px #CCCCCC;
+		    position:absolute;
+		    top:19%;
+		    left:24%;
+		    background-color: #E1EFF7;
+		    border-radius: 8px;
+		}
+		#login_title {
+		    width: 100%;
+		    height: 60px;
+		    text-align:center;
+		}
+		h2{
+			margin-top:4px;
+			color:#415A84;
+		}
+		.line {
+		    width: 380px;
+		    height: 30px;
+		    margin-top: 35px;
+		    line-height: 60px;
+		    margin-left: 20px;
+		    text-align: center;
+		}
+		.line input {
+		    width: 200px;
+		    height:30px;
+		}
+		.line a {
+		    font-size: 14px;
+		    color: black;
+		}
+		.line span {
+		    color: #F00;
+		}
+		#log_submit {
+		    display: block;
+		    width: 200px;
+		    height: 30px;
+		    margin-left:112px;
+		    margin-top: 50px;
+		    margin-bottom: 5px;
+		}
+		select{
+			height:30px;
+			width:100px;
+			font-family: "Microsoft Yahei";
+		}
+		#footer {
+		    width: 100%;
+		    line-height: 26px;
+		    position: absolute;
+		    bottom: 30px;
+		    font-family: Verdana, Geneva, sans-serif;
+			font-size: 12px;
+			color: #011e54;	
+		    text-align:center;
+		}
+		
+  	</style>
+  </head>
+  <body>
+  	<form action="servlet/login" method="post" name="form1">
+  	<div id="all">
+	  	<div id="login">
+		    <div id="login_title">
+		    	<img src="./image/6.png">
+		    	<h2>学生实验预约平台</h2>
+		    </div>
+	 
+		    <div class="line">账号  
+		    	 <input name="username" type="text" placeholder="学生/教师/管理员" />
+		    </div>
+		    <div class="line">密码  
+		     	 <input name="password" type="password" placeholder="请输入密码" />
+		    </div>
+		    <div class="line">类型 
+		     	 <select id="type" name="type">
+		     	 	<option value="学生">学生</option>
+		     	 	<option value="教师">教师</option>
+		     	 	<option value="管理员">管理员</option>
+		     	 </select> 	 
+		    </div>
+		    	 <input id="log_submit" type="button" value="登录" onclick="check()"> 
+	  	</div>	
+	</div>
+	 <div id="footer">
+	  	<p> 中北大学 :文澜苑</p>
+	  	<p><span><a href="http://www.nuc.edu.cn/" target="_blank" style="color:#606060">联系我们</a></span></p>
+	</div>
+	</form>
+  </body>
+</html>
